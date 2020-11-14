@@ -1,8 +1,14 @@
-body  { background-color: #ece469; }
+body  {
+    background-image: url(./pantalla2.jpg);
+}
 
 h1 {
-    color: brown;
-    margin:center
+    color: rgb(255, 255, 255);
+    text-align:center;
+    font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: bolder;
+    
     
 }
 .button {
@@ -18,4 +24,18 @@ h1 {
     box-shadow: 0px 3px 0px #373c3c;
     
     
+}
+#diseñofondo {
+    background-image: url(./dicesar.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: indigo;
+    
+    
+    
+    
+}
+
+#btnCifrar {
+    background-color: chartreuse;
 }

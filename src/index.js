@@ -1,7 +1,12 @@
 import cipher from './cipher.js';
 
 function onClickEncriptar() {
-        debugger
+
+
+  
+  
+  
+  
         //1.OBTENER EL TEXTO(DOCUMENT.GET...IDCAJA CERRAR PARENTESIS Y PONER .VALUE) ASIGNARLO A UNA VARIABLE ,EXTRAER EL VALUE DE LA CAJA DE TEXTO
         const txtMensaje = document.getElementById("txtMensaje").value;
         
@@ -13,10 +18,33 @@ function onClickEncriptar() {
         //4.ASIGNAR EL TEXTO ENCRIPTADO AL MENSAJE2
          document.getElementById("txtMensajeEncriptado").value=txtMensajeEncriptado;
         //5.DECENCRIPTAR ES HACER LO MISMO PERO AL REVES 
-
-        console.log("estoyaqui");
+        
+        
 }
+function onClickDescifrar (){ 
+       const txtMensajeEncriptado= document.getElementById("txtMensajeEncriptado").value;
+       const desplazamiento= document.getElementById("numeroDesplazamiento").value;
+       const txtDescencriptado=cipher.decode(txtMensajeEncriptado,desplazamiento);
+       document.getElementById("txtMensaje2").value=txtDescencriptado;
+       console.log (txtDescencriptado)
+       
+       
+        console.log ("Aqui estoy")
+
+}
+document.getElementById("btnDescifrar").addEventListener("click", onClickDescifrar)
+
 
 document.getElementById("btnCifrar").addEventListener("click", onClickEncriptar)
-console.log(cipher);
+
+document.getElementById("txtMensaje").addEventListener('keypress', (event) => {
+        const keyName = event.key;
+        document.getElementById("txtMensaje").value=document.getElementById("txtMensaje").value.toUpperCase()
+      });
+
+
+
+
+
+
 
