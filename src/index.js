@@ -25,15 +25,17 @@ function onClickDescifrar (){
         console.log ("Aqui estoy")
 
 }
-document.getElementById("btnDescifrar").addEventListener("click", onClickDescifrar)
+function onKeypress (event){ 
+    
+        const txtMensaje = document.getElementById("txtMensaje");
+        txtMensaje.value=txtMensaje.value.toUpperCase()
+}       // .toUpperCase es el que transforma a mayuscula un string 
 
+document.getElementById("btnDescifrar").addEventListener("click", onClickDescifrar)
 
 document.getElementById("btnCifrar").addEventListener("click", onClickEncriptar)
 
-document.getElementById("txtMensaje").addEventListener('keypress', (event) => {
-        const keyName = event.key;
-        document.getElementById("txtMensaje").value=document.getElementById("txtMensaje").value.toUpperCase()
-      });
+document.getElementById("txtMensaje").addEventListener('keyup', onKeypress);
 
 
 

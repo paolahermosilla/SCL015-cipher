@@ -1,24 +1,24 @@
 
 const cipher = {
-  encode: function(txtMensaje, numeroDesplazamiento) {
-    
+  encode: function (txtMensaje, numeroDesplazamiento) {
+
     let resultado = "";
 
     numeroDesplazamiento = (numeroDesplazamiento % 26 + 26) % 26;
-    
-    if (txtMensaje) {
-      for (let i = 0; i < txtMensaje.length; i++) {
-        const ascii = txtMensaje.charCodeAt(i);
-        const asciimodificado = (ascii - 65 + numeroDesplazamiento) % 26 + 65;
-        resultado = resultado + String.fromCharCode(asciimodificado)
-      }
+    //estudiar ,ir decifrando por parte .
 
+    for (let i = 0; i < txtMensaje.length; i++) {
+      const ascii = txtMensaje.charCodeAt(i);
+      const asciimodificado = (ascii - 65 + numeroDesplazamiento) % 26 + 65;
+      resultado = resultado + String.fromCharCode(asciimodificado)
     }
+
+
 
     return resultado;
 
   },
-  decode: function (txtMensajeEncriptado, numeroDesplazamiento)  {
+  decode: function (txtMensajeEncriptado, numeroDesplazamiento) {
     let resultado = "";
     numeroDesplazamiento = (numeroDesplazamiento % 26 - 26) % 26;
     if (txtMensajeEncriptado) {
