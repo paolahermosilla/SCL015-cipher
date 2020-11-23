@@ -1,11 +1,6 @@
 import cipher from './cipher.js';
 
 function onClickEncriptar() {
-
-
-  
-  
-  
   
         //1.OBTENER EL TEXTO(DOCUMENT.GET...IDCAJA CERRAR PARENTESIS Y PONER .VALUE) ASIGNARLO A UNA VARIABLE ,EXTRAER EL VALUE DE LA CAJA DE TEXTO
         const txtMensaje = document.getElementById("txtMensaje").value;
@@ -18,8 +13,7 @@ function onClickEncriptar() {
         //4.ASIGNAR EL TEXTO ENCRIPTADO AL MENSAJE2
          document.getElementById("txtMensajeEncriptado").value=txtMensajeEncriptado;
         //5.DECENCRIPTAR ES HACER LO MISMO PERO AL REVES 
-        
-        
+               
 }
 function onClickDescifrar (){ 
        const txtMensajeEncriptado= document.getElementById("txtMensajeEncriptado").value;
@@ -27,8 +21,7 @@ function onClickDescifrar (){
        const txtDescencriptado=cipher.decode(txtMensajeEncriptado,desplazamiento);
        document.getElementById("txtMensaje2").value=txtDescencriptado;
        console.log (txtDescencriptado)
-       
-       
+    
         console.log ("Aqui estoy")
 
 }

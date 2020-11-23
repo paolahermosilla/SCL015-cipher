@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <title>Codice di Cesar</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-   <body id="colorfondo">
-    <div id="root">
-      <div>
-         <p><h2> Quieres comunicarte con tus amigos o compañeros de 
-           trabajo de una forma unica e indescifrable.Para esto hemos implementado
-           esta aplicacion. 
-           Elije el numero de desplazamiento que le quieres dar a tu cifrado secreto
-           Ingresa tu mensaje a cifrar o descifrar.
-          Envia tus codigos mediante WhatsApp y diviertete con tus amig@s</h2></p>
+
+<head>
+  <meta charset="utf-8">
+  <title>Codice di Cesar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body id="colorfondo">
+  <div id="intrucciones">
+   <h3>Modo de uso:</h3>
+   1-En el area de texto escribe en Mayusculas el mensaje que quieres cifrar <strong> este no debe incluir letra ñ ni caracteres</strong> 
+  2-Dale click a cifrar y obten tu mensaje en modo codice di. <br> 
+   3-Copia y pega en el area decifrar tus palabras ya cifradas y obten el secreto revelado.
   </div>
-    <h3>Desplazamiento:</h3>
-    <input type="number" id="numeroDesplazamiento" value=""/>
-    <h3>Mensaje</h3>
-    <input type="text" id="txtMensaje"/>
-    <button type="button" id="btnCifrar">Cifrar</button>
-    <input type="text" id="txtMensajeEncriptado">
-    <button type="button" id="btnDescifrar">Descifrar</button>
-    <input type="text" id="txtMensaje2"/>
-    </div>
-     <script src="index.js" type="module"></script>
-  </body>
+   <section>
+   <h3 class="desplazamiento">Desplazamiento:</h3>
+  <input type="number" id="numeroDesplazamiento" value="" />
+  <h3 id="mensaje">Mensaje</h3>
+  <input type="text" id="txtMensaje" />
+  <button type="button" id="btnCifrar">Cifrar</button>
+  <input type="text" id="txtMensajeEncriptado">
+  <button type="button" id="btnDescifrar">Descifrar</button>
+  <input type="text" id="txtMensaje2" />
+  </section>
+  <script src="index.js" type="module"></script>
+</body>
+
 </html>

@@ -1,8 +1,11 @@
 
 const cipher = {
-  encode: (txtMensaje, numeroDesplazamiento) => {
+  encode: function(txtMensaje, numeroDesplazamiento) {
+    
     let resultado = "";
+
     numeroDesplazamiento = (numeroDesplazamiento % 26 + 26) % 26;
+    
     if (txtMensaje) {
       for (let i = 0; i < txtMensaje.length; i++) {
         const ascii = txtMensaje.charCodeAt(i);
@@ -11,9 +14,11 @@ const cipher = {
       }
 
     }
+
     return resultado;
+
   },
-  decode: (txtMensajeEncriptado, numeroDesplazamiento) => {
+  decode: function (txtMensajeEncriptado, numeroDesplazamiento)  {
     let resultado = "";
     numeroDesplazamiento = (numeroDesplazamiento % 26 - 26) % 26;
     if (txtMensajeEncriptado) {
